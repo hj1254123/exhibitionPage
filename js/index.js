@@ -1,14 +1,27 @@
+var throttle = function(fn, gapTime) {
+    var _lastTime = null
+    return function() {
+        var context = this
+        var args = arguments
+        var _nowTime = + new Date()
+        if(_nowTime - _lastTime > gapTime || !_lastTime) {
+            fn.apply(context, args)
+            _lastTime = _nowTime
+        }
+    }
+}
 var navScrollBackground = function() {
     var nav = document.querySelector('nav')
-    window.addEventListener('scroll', function() {
-        var top = document.documentElement.scrollTop
-        if (top > 0) {
-            nav.classList.add('nav-style')
+    window.addEventListener('scroll', throttle(function() {
+        var top = window.pageYOffset|| document.documentElement.scrollTop|| document.body.scrollTop|| 0
+        console.log(top);
+        
+        if(top > 20) {
+            nav.className = 'nav-style'
         } else {
-            nav.classList.remove('nav-style')
-
+            nav.className =''
         }
-    })
+    }, 20))
 
 }
 
