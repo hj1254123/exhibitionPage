@@ -13,13 +13,12 @@ var throttle = function(fn, gapTime) {
 var navScrollBackground = function() {
     var nav = document.querySelector('nav')
     window.addEventListener('scroll', throttle(function() {
-        var top = window.pageYOffset|| document.documentElement.scrollTop|| document.body.scrollTop|| 0
-        console.log(top);
-        
+        var top = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+        // console.log(top);
         if(top > 20) {
             nav.className = 'nav-style'
         } else {
-            nav.className =''
+            nav.className = ''
         }
     }, 20))
 
@@ -33,7 +32,7 @@ var clickShowUl = function() {
     var close = e('.close')
     // 2.绑定点击事件
     bindEvent(but, 'click', function() {
-        console.log('?');
+        // console.log('?');
         toggleClass(ul, 'show')
         toggleClass(shade, 'shadeShow')
     })
@@ -50,6 +49,12 @@ var clickShowUl = function() {
 //
 // 主函数
 var __main = function() {
+    // 
+    window.addEventListener('DOMContentLoaded', function() {
+        var content = document.querySelector('#content')
+        content.className = 'active'
+
+    })
     // 页面滚动改变导航栏样式
     navScrollBackground()
     // 屏幕小于768px时，点击显示/隐藏ul(导航栏)

@@ -2,11 +2,14 @@
 
 header {
     position: relative;
-    background-image: url(../img/header.jpg);
-    background-position: center center;
-    background-size: cover;
+    /* background-image: url(../img/header.jpg); */
+    /* background-position: center center; */
+    /* background-size: cover; */
     width: 100%;
-    height: 740px;
+    height: 700px;
+    /* background-color: #2d2c37; */
+    /* background-color: rgba(45,44,55,0.8); */
+    /* box-shadow: 1px 1.7px 10px rgba(0, 0, 0, 0.49); */
 }
 
 /* 导航栏样式 */
@@ -102,7 +105,7 @@ nav ul li:hover {
     top: 0;
     width: inherit;
     height: inherit;
-    background-color: rgba(0, 0, 0, 0.6);
+    /* background-color: rgba(0, 0, 0, 0.6); */
 }
 
 #welcome {
@@ -116,12 +119,12 @@ nav ul li:hover {
 }
 
 #welcome>p {
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 20px;
 }
 
 #welcome>h1 {
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .close {
