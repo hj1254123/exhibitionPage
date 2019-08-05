@@ -7,8 +7,10 @@
 }
 
 #content {
+    position: absolute;
+    top: 0;
     /* transform: translateY(70px); */
-    transition: all 1s ease-out;
+    transition: top 1s ease-out;
     width: 92%;
     margin: 0 auto;
     padding: 30px;
@@ -25,7 +27,8 @@
 }
 
 #content.active {
-    transform: translateY(-50px);
+    /* transform: translateY(-50px); */
+    top: -50px;
 }
 
 @media (max-width: 768px) {
@@ -132,10 +135,10 @@
 
 /* blog区块 */
 
-/* .blog {
+.blog {
     width: 100%;
     height: 250px;
-    background-image: url(../img/blog.jpg);
+    background-image: url(../img/dusk.jpg);
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -166,8 +169,8 @@
     padding: 12px 30px;
     -webkit-box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
     box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
-    -webkit-transition: all .2s;
-    transition: all .2s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
 }
 
 .blog-content a:hover {
@@ -180,13 +183,14 @@
         display: none;
         background-image: none;
     }
-} */
+}
 
 /* 邮我区块 */
-/* 
+
 .contact {
+    width: 100%;
     height: 250px;
-    background-image: url(../../img/contact.jpg);
+    background-image: url(../img/night.jpg);
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -194,8 +198,7 @@
 
 .contact-content {
     
-    width: inherit;
-    height: inherit;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     padding: 95px 0 0 100px;
@@ -204,12 +207,18 @@
 .contact-content h3 {
     float: left;
     font-size: 45px;
-    margin-right: 20px;
 }
 
 .contact-content p {
+    float: right;
     font-size: 20px;
-    height: 20px;
+    margin-right: 150px;
+}
+.contact-content p a {
+    color: #fff;
+}
+.contact-content p a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -217,7 +226,7 @@
         display: none;
         background-image: none;
     }
-} */
+}
 
 /* ==============footer部分=========== */
 
