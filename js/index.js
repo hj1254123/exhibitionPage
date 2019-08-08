@@ -50,11 +50,6 @@ var clickShowUl = function() {
 // 主函数
 var __main = function() {
     // 
-    window.addEventListener('DOMContentLoaded', function() {
-        var content = document.querySelector('#content')
-        content.className = 'active'
-
-    })
     // 页面滚动改变导航栏样式
     navScrollBackground()
     // 屏幕小于768px时，点击显示/隐藏ul(导航栏)
